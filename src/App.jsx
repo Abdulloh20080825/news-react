@@ -9,7 +9,7 @@ const App = () => {
 
   useEffect(() => {
     fetch(
-      `https://newsapi.org/v2/everything?q=today&apiKey=62550df43e8c41618e98cdc0cc1fc806`
+      `https://newsapi.org/v2/everything?q=news&apiKey=62550df43e8c41618e98cdc0cc1fc806`
     )
       .then((response) => response.json())
       .then((data) => setNews(data.articles));
