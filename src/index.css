@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 1px;
+}
+
+.app-main {
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow: scroll;
+}
+
+.app {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  padding: 100px 25px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.loading-bar-container {
+  width: 80%;
+  max-width: 600px;
+}
+
+.loading-bar {
+  width: 100%;
+  background-color: #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.loading-progress {
+  width: 0;
+  height: 20px;
+  background-color: #4caf50;
+  animation: loading 5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.news {
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 2px solid #fff6;
+  border-radius: 5px;
+}
+
+.news .about-news p {
+  font-size: 20px;
+  text-align: center;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.news .describe-news {
+  width: 100%;
+}
+.news .describe-news .header-content {
+  display: flex;
+  gap: 30px;
+  line-height: 20px;
+  margin: 20px 0;
+}
+
+.news .describe-news img {
+  width: 50%;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+hr {
+  margin: 10px 0;
+}
+
+.news .get-source {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  align-items: end;
+}
+
+.news .get-source p {
+  font-weight: 800;
+}
+
+.search-container {
+  position: fixed;
+  height: 10vh;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.search-container input {
+  padding: 15px;
+  width: 300px;
+  font-size: 20px;
+  color: #000;
+}
+
+@media only screen and (max-width: 1200px) {
+  .news .describe-news .header-content {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .app {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .news .describe-news .header-content {
+    font-size: 10px;
+  }
+
+  .news .news-describtion {
+    font-size: 10px;
+  }
+  .search-container input {
+    padding: 5px;
+    font-size: 15px;
+  }
+}
